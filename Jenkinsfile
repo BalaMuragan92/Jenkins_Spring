@@ -11,19 +11,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh mvn clean install
+                mvn clean install
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh mvn clean test
+                mvn clean test
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh mvn clean deploy
+                mvn clean deploy
             }
         }
     }
