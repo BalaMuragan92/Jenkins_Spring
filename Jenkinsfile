@@ -9,17 +9,17 @@ pipeline {
         }
         stage('Build') {
             steps {
-                mvn clean install
+                echo "BUILD"
             }
         }
         stage('Test') {
             steps {
-                mvn clean test
+                echo "TEST"
             }
         }
         stage('Deploy') {
             steps {
-                mvn clean deploy
+                echo "DEPLOY"
             }
         }
     }
