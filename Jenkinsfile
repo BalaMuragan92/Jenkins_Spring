@@ -10,17 +10,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo "BUILD"
-                sh 'mvn clean install'
+                sh 'mvn clean build'
             }
         }
         stage('Test') {
             steps {
                 echo "TEST"
+                sh 'mvn clean test'
             }
         }
         stage('Deploy') {
             steps {
                 echo "DEPLOY"
+                sh 'mvn clean deploy'
             }
         }
     }
